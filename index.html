@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Subscription Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="dashboard">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2 class="logo">
+            💳 SubTrack
+        </h2>
+
+        <nav>
+
+            <a href="index.html" class="active">
+                🏠 Dashboard
+            </a>
+
+            <a href="subscriptions.html">
+                💳 Subscriptions
+            </a>
+
+            <a href="analytics.html">
+                📊 Analytics
+            </a>
+
+            <a href="reminders.html">
+                🔔 Reminders
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+
+        <!-- TOP -->
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>
+                    Good morning 👋
+                </h1>
+
+                <p>
+                    Here's your subscription overview.
+                </p>
+
+            </div>
+
+
+            <div class="top-buttons">
+
+                <button
+                    id="darkModeBtn"
+                    class="dark-btn">
+
+                    🌙
+
+                </button>
+
+
+                <a
+                    href="subscriptions.html"
+                    class="add-btn">
+
+                    + Add Subscription
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SUMMARY -->
+
+        <div class="summary-cards">
+
+
+            <div class="summary-card">
+
+                <div class="card-icon">
+                    💰
+                </div>
+
+                <p>
+                    Monthly Cost
+                </p>
+
+                <h2 id="monthlyCost">
+                    ₹0.00
+                </h2>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="card-icon">
+                    📅
+                </div>
+
+                <p>
+                    Yearly Cost
+                </p>
+
+                <h2 id="yearlyCost">
+                    ₹0.00
+                </h2>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="card-icon">
+                    📦
+                </div>
+
+                <p>
+                    Active Subscriptions
+                </p>
+
+                <h2 id="activeCount">
+                    0
+                </h2>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- BUDGET -->
+
+        <section class="budget-card card">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        💰 Monthly Budget
+                    </h2>
+
+                    <p>
+                        Control your subscription spending
+                    </p>
+
+                </div>
+
+
+                <div class="budget-edit">
+    <input type="number" id="budgetInput" min="1" placeholder="New budget">
+    <button id="setBudgetBtn" class="budget-btn">Set Budget</button>
+</div>
+
+            </div>
+
+
+            <div class="budget-info">
+
+
+                <div>
+
+                    <span>
+                        Budget
+                    </span>
+
+                    <strong id="budgetAmount">
+                        ₹5,000.00
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Spent
+                    </span>
+
+                    <strong id="budgetSpent">
+                        ₹0.00
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Remaining
+                    </span>
+
+                    <strong id="budgetRemaining">
+                        ₹5,000.00
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="progress budget-progress">
+
+                <div
+                    id="budgetProgress"
+                    class="progress-bar">
+                </div>
+
+            </div>
+
+
+            <p
+                id="spendingStatus"
+                class="spending-status">
+
+                🟢 Low spending
+
+            </p>
+
+        </section>
+
+
+
+        <!-- SAVING TIP -->
+
+        <section class="suggestion card">
+
+            <h2>
+                💡 Smart Saving Tip
+            </h2>
+
+            <p id="savingSuggestion">
+
+                Add subscriptions to get saving suggestions.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- CONTENT -->
+
+        <div class="content-grid">
+
+
+            <!-- SUBSCRIPTIONS -->
+
+            <section class="card">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            Your Subscriptions
+                        </h2>
+
+                        <p>
+                            Recently added subscriptions
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div id="dashboardSubscriptions">
+
+                </div>
+
+            </section>
+
+
+
+            <!-- RENEWALS -->
+
+            <section class="card">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            Upcoming Renewals
+                        </h2>
+
+                        <p>
+                            Don't miss your payments
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div id="dashboardRenewals">
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,512 @@
+/* =========================
+   BASIC
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   LAYOUT
+========================= */
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 230px;
+    background: #111827;
+    color: white;
+    padding: 25px 15px;
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+.sidebar nav a:hover,
+.sidebar nav .active {
+    background: #22a7b1;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+}
+
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.topbar h1 {
+    margin-bottom: 5px;
+}
+
+.topbar p {
+    color: #777;
+}
+
+
+.top-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.add-btn {
+    background: #22a7b1;
+    color: white;
+    padding: 11px 16px;
+    border-radius: 8px;
+}
+
+
+/* =========================
+   DARK MODE BUTTON
+========================= */
+
+.dark-btn {
+    border: none;
+    background: white;
+    padding: 10px 13px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+/* =========================
+   SUMMARY CARDS
+========================= */
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.summary-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.card-icon {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.summary-card p {
+    color: #777;
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    color: #777;
+    margin-top: 5px;
+}
+
+
+/* =========================
+   CONTENT GRID
+========================= */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+/* =========================
+   SUBSCRIPTION
+========================= */
+
+.subscription {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.service-icon {
+    font-size: 25px;
+}
+
+.service-info {
+    flex: 1;
+}
+
+.service-info strong {
+    display: block;
+}
+
+.service-info span,
+.service-price span {
+    color: #777;
+    font-size: 13px;
+}
+
+.service-price {
+    text-align: right;
+}
+
+.service-price strong {
+    display: block;
+}
+
+.service-date {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.action-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.edit-btn,
+.delete-btn {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #e0e7ff;
+}
+
+.delete-btn {
+    background: #fee2e2;
+}
+
+
+/* =========================
+   ADD FORM
+========================= */
+
+.add-section form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.save-btn {
+    background: #22a7b1;
+    color: white;
+    border: none;
+    padding: 11px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   FILTERS
+========================= */
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filters input {
+    flex: 1;
+}
+
+
+/* =========================
+   RENEWALS
+========================= */
+
+.renewal-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.renewal-item span {
+    display: block;
+    color: #777;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.renewal-date {
+    color: #f59e0b;
+    font-weight: bold;
+    text-align: right;
+}
+
+
+/* =========================
+   ANALYTICS
+========================= */
+
+.analytics-content {
+    margin-top: 20px;
+}
+
+.category-row {
+    margin-bottom: 20px;
+}
+
+.category-row > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.progress {
+    width: 100%;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #22a7b1;
+}
+
+
+/* =========================
+   💰 BUDGET
+========================= */
+
+.budget-card {
+    margin-bottom: 20px;
+}
+
+.budget-btn {
+    background: #22a7b1;
+    color: white;
+    border: none;
+    padding: 9px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.budget-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.budget-info span {
+    display: block;
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.budget-info strong {
+    font-size: 16px;
+}
+
+.budget-progress {
+    margin-bottom: 10px;
+}
+
+.over-budget {
+    background: #ef4444;
+}
+
+.spending-status {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+
+/* =========================
+   💡 SAVING TIP
+========================= */
+
+.suggestion h2 {
+    margin-bottom: 8px;
+}
+
+.suggestion p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* =========================
+   🌙 DARK MODE
+========================= */
+
+body.dark {
+    background: #22a7b1;
+    color: #f3f4f6;
+}
+
+body.dark .main-content {
+    background: #111827;
+}
+
+body.dark .card,
+body.dark .summary-card {
+    background: #1f2937;
+    color: white;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark strong {
+    color: white;
+}
+
+body.dark p,
+body.dark span {
+    color: #d1d5db;
+}
+
+body.dark .dark-btn {
+    background: #374151;
+    color: white;
+}
+
+body.dark input,
+body.dark select {
+    background: #374151;
+    color: white;
+    border-color: #4b5563;
+}
+
+body.dark .subscription,
+body.dark .renewal-item {
+    border-color: #374151;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .add-section form {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .budget-info {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+}
+.budget-edit {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.budget-edit input {
+    width: 150px;
+}

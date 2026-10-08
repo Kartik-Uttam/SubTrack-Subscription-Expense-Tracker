@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Subscriptions</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="dashboard">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2 class="logo">
+            💳 SubTrack
+        </h2>
+
+        <nav>
+
+            <a href="index.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="subscriptions.html"
+               class="active">
+
+                💳 Subscriptions
+
+            </a>
+
+            <a href="analytics.html">
+                📊 Analytics
+            </a>
+
+            <a href="reminders.html">
+                🔔 Reminders
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>
+                    Subscriptions
+                </h1>
+
+                <p>
+                    Manage all your subscriptions
+                </p>
+
+            </div>
+
+
+            <button
+                id="darkModeBtn"
+                class="dark-btn">
+
+                🌙
+
+            </button>
+
+        </div>
+
+
+
+        <!-- ADD -->
+
+        <section class="card add-section">
+
+            <h2>
+                Add Subscription
+            </h2>
+
+
+            <form id="subscriptionForm">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Subscription Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subscriptionName"
+                        placeholder="Example: Netflix"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Category
+                    </label>
+
+                    <select id="category">
+
+                        <option>
+                            Entertainment
+                        </option>
+
+                        <option>
+                            Shopping
+                        </option>
+
+                        <option>
+                            Education
+                        </option>
+
+                        <option>
+                            Software
+                        </option>
+
+                        <option>
+                            Health
+                        </option>
+
+                        <option>
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Cost
+                    </label>
+
+                    <input
+                        type="number"
+                        id="cost"
+                        min="1"
+                        placeholder="₹ Cost"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Billing Cycle
+                    </label>
+
+                    <select id="billingCycle">
+
+                        <option>
+                            Monthly
+                        </option>
+
+                        <option>
+                            Yearly
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Next Billing Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="billingDate"
+                        required>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="save-btn">
+
+                    Add Subscription
+
+                </button>
+
+
+            </form>
+
+        </section>
+
+
+
+        <!-- FILTER -->
+
+        <section class="card">
+
+            <div class="filters">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔍 Search subscription...">
+
+
+                <select id="filterCategory">
+
+                    <option>
+                        All
+                    </option>
+
+                    <option>
+                        Entertainment
+                    </option>
+
+                    <option>
+                        Shopping
+                    </option>
+
+                    <option>
+                        Education
+                    </option>
+
+                    <option>
+                        Software
+                    </option>
+
+                    <option>
+                        Health
+                    </option>
+
+                    <option>
+                        Other
+                    </option>
+
+                </select>
+
+
+                <select id="filterBilling">
+
+                    <option>
+                        All
+                    </option>
+
+                    <option>
+                        Monthly
+                    </option>
+
+                    <option>
+                        Yearly
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div id="subscriptionList">
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
